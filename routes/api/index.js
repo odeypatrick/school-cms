@@ -3,6 +3,10 @@ const { signup, login, getUserData, isAuthenticated } = require('./controller/au
 const { addStudent, getSchoolStudent, getSingleStudent, searchStudents, updateStudent, deleteStudent } = require('./controller/student');
 const { addTeacher, getSchoolTeacher, getSingleTeacher, updateTeacher, deleteTeacher } = require('./controller/Teacher');
 
+router.get('/', (req, res) => {
+    res.json("Welcome to school api")
+})
+
 // auth
 router.post('/signup', signup)
 router.post('/login', login)
